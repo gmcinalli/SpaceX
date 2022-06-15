@@ -1,0 +1,14 @@
+@import url("../theme/theme.css");
+
+.CrewMember {
+    display: flex;
+    justify-content: center;
+}
+
+.CrewMember-Name {
+    display: flex;
+}
+
+.CrewMember-Status {
+    margin-left: var(--gutter-m)
+}

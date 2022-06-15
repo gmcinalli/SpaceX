@@ -1,0 +1,11 @@
+:root {
+    --gutter: 4px;
+    --gutter-mini: calc(var(--gutter) + var(--gutter / 2));
+    --gutter-xxs: calc(var(--gutter) * 2);
+    --gutter-xs: calc(var(--gutter) * 3);
+    --gutter-s: calc(var(--gutter) * 4);
+    --gutter-m: calc(var(--gutter) * 6);
+    --gutter-l: calc(var(--gutter) * 8);
+    --gutter-xl: calc(var(--gutter) * 12);
+    --gutter-xxl: calc(var(--gutter) * 16);
+}
