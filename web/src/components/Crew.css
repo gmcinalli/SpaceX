@@ -1,0 +1,21 @@
+.Crew {
+}
+
+.Crew-Header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--gutter-m);
+}
+
+.Crew-Filter {
+    width: 200px;
+}
+
+.Crew-Search {
+    width: 300px;
+}
+
+.Crew-Loading {
+    text-align: center;
+    margin-bottom: var(--gutter-s);
+}

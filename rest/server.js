@@ -1,9 +1,11 @@
+import bodyParser from 'body-parser'
 import Express from 'express'
-import JsonServer from 'json-server'
 import Path from 'path'
 import Url from 'url'
 
-const PORT = process.env.PORT || 8080
+import Crew from './api/crew.js'
+
+const PORT = process.env.PORT
 
 const __filename = Url.fileURLToPath(import.meta.url);
 const __dirname = Path.dirname(__filename)
@@ -14,9 +16,12 @@ const app = Express()
 app
     .use((request, response, next) => {
         response.header('Access-Control-Allow-Origin', '*')
+        response.header("Access-Control-Allow-Methods", "GET,POST")
+        response.header("Access-Control-Allow-Headers", "Content-Type")
         next()
     })
-    .use('/api', JsonServer.router(db))
+    .use(bodyParser.json())
+    .use('/crew', Crew)
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
