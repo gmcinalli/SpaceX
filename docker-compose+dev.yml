@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+    rest:
+        build:
+            args:
+                ENV: dev
+        ports:
+            - 9229:9229 # Node debugger
+        volumes:
+            - ./rest:/app
+
+    web:
+        build:
+            args:
+                ENV: dev
+        ports:
+            - 8000:8000
+        volumes:
+            - ./web:/app

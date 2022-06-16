@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+    proxy:
+        container_name: proxy
+        image: gmcinalli/spacex-proxy
+        build: ./proxy
+        ports:
+            - 80:80
+        restart: always
+
+    rest:
+        container_name: rest
+        image: gmcinalli/spacex-rest
+        build: ./rest
+        # environment:
+        #     PORT: '8080'
+
+    web:
+        container_name: web
+        image: gmcinalli/spacex-web
+        build: ./web
+        environment:
+            PORT: '8000'
+            # REACT_APP_REST_URL: /api
