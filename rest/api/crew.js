@@ -2,7 +2,7 @@ import { Router } from 'express'
 import spaceGet from '../lib/spacex.js'
 
 // API docs
-// https://github.com/r-spacex/SpaceX-API/blob/master/docs/crew/v4/query.md
+// https://github.com/r-spacex/SpaceX-API/tree/master/docs/crew/v4
 
 const router = Router()
 

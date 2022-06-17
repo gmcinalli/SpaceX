@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const API_URL = 'http://localhost:8080'
+const API_URL = process.env.REACT_APP_REST_URL || '/api'
 
 function useGetCrew(agency, search) {
     const [ busy, setBusy ] = useState(false)
